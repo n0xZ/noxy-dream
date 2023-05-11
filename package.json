@@ -1,36 +1,40 @@
 {
-  "name": "noxy-dream",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@clerk/nextjs": "^4.17.1",
-    "@types/node": "20.1.0",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "autoprefixer": "10.4.14",
-    "class-variance-authority": "^0.6.0",
-    "clsx": "^1.2.1",
-    "drizzle-orm": "^0.25.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.1",
-    "lucide-react": "^0.214.0",
-    "next": "13.4.1",
-    "pg": "^8.10.0",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwind-merge": "^1.12.0",
-    "tailwindcss": "3.3.2",
-    "tailwindcss-animate": "^1.0.5",
-    "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "@types/pg": "^8.6.6"
-  }
+	"name": "noxy-dream",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"drizzle": "drizzle-kit generate:pg --out migrations-folder --schema src/db/schema.ts",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@clerk/nextjs": "^4.17.1",
+		"@clerk/themes": "^1.6.4",
+		"@types/react": "18.2.6",
+		"@types/react-dom": "18.2.4",
+		"autoprefixer": "10.4.14",
+		"class-variance-authority": "^0.6.0",
+		"clsx": "^1.2.1",
+		"drizzle-orm": "^0.25.4",
+		"eslint": "8.40.0",
+		"eslint-config-next": "13.4.1",
+		"lucide-react": "^0.214.0",
+		"next": "13.4.1",
+		"pg": "^8.10.0",
+		"postcss": "8.4.23",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"tailwind-merge": "^1.12.0",
+		"tailwindcss": "3.3.2",
+		"tailwindcss-animate": "^1.0.5",
+		"typescript": "5.0.4"
+	},
+	"devDependencies": {
+		"@types/node": "20.1.0",
+		"@types/pg": "^8.6.6",
+		"drizzle-kit": "^0.17.6"
+	}
 }
