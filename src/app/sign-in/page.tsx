@@ -1,9 +1,11 @@
-import { SignIn } from '@clerk/nextjs/app-beta'
-import React from 'react'
+import { SignIn, currentUser } from '@clerk/nextjs/app-beta'
+import { redirect } from 'next/navigation'
 
-export default function Login() {
+export default async function Login() {
+	const user = await currentUser()
+	if (user) redirect('/home')
 	return (
-		<main className='grid h-screen place-items-center'>
+		<main className="grid h-screen place-items-center">
 			<SignIn afterSignInUrl="/home" />
 		</main>
 	)
