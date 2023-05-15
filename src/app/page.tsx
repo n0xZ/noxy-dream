@@ -7,8 +7,8 @@ const mukta = Mukta({ subsets: ['latin'], weight: '400' })
 export default async function Home() {
 	return (
 		<>
-			<header className="p-6 ">
-				<nav className="container flex flex-row items-center justify-between max-w-4xl mx-auto text-md xl:text-xl">
+			<header className="  p-6 border-b-2 border-[#e7e5e4]">
+				<nav className="container flex flex-row items-center justify-between max-w-4xl mx-auto md:text-md lg:text-lg sm:text-sm xl:text-xl">
 					<Link href="/">Noxy-wish</Link>
 
 					<Link href="/sign-in" className="p-3 text-white bg-black rounded-lg">
