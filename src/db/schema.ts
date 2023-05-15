@@ -12,7 +12,8 @@ type AuthorData = {
 
 export const wishes = pgTable('wish', {
 	id: serial('id').primaryKey(),
-	content: varchar('title').notNull(),
+	title: varchar('title').notNull(),
+	content: varchar('content').notNull(),
 	createdAt: timestamp('createdAt').defaultNow().notNull(),
 	author: json('author').$type<AuthorData>(),
 })
