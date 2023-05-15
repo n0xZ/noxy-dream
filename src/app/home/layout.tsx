@@ -6,6 +6,7 @@ import { Mukta } from 'next/font/google'
 import { Skeleton } from '@/components/ui/skeleton'
 
 const mukta = Mukta({ subsets: ['latin'], weight: '400' })
+
 export default function Layout({ children }: { children: ReactNode }) {
 	return (
 		<>
@@ -21,7 +22,12 @@ export default function Layout({ children }: { children: ReactNode }) {
 
 						<ul className="flex flex-row items-center space-x-4">
 							<li>
-								<Link href="/home/wish/create">Agregar nuevo deseo</Link>
+								<Link
+									href="/home/wish/create"
+									className="duration-100 ease-in-out hover:text-emerald-400"
+								>
+									Agregar nuevo deseo
+								</Link>
 							</li>
 							<li>
 								<ClerkLoading>
